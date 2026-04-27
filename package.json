@@ -38,16 +38,16 @@
   ],
   "author": {
     "name": "Mohammed (Ai RawayieAldhaka)",
-    "url": "https://github.com/YOUR_USERNAME"
+    "url": "https://github.com/medissaoui711"
   },
   "license": "MIT",
-  "homepage": "https://github.com/YOUR_USERNAME/localzada#readme",
+  "homepage": "https://github.com/medissaoui711/localzada-host#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/YOUR_USERNAME/localzada.git"
+    "url": "git+https://github.com/medissaoui711/localzada-host.git"
   },
   "bugs": {
-    "url": "https://github.com/YOUR_USERNAME/localzada/issues"
+    "url": "https://github.com/medissaoui711/localzada-host/issues"
   },
   "engines": {
     "node": ">=18.0.0"

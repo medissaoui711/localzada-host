@@ -6,7 +6,7 @@
 
 شغّل وشارك سيرفراتك المحلية بأمر واحد.
 
-[![CI](https://github.com/YOUR_USERNAME/localzada/actions/workflows/ci.yml/badge.svg)](https://github.com/YOUR_USERNAME/localzada/actions/workflows/ci.yml)
+[![CI](https://github.com/medissaoui711/localzada-host/actions/workflows/ci.yml/badge.svg)](https://github.com/medissaoui711/localzada-host/actions/workflows/ci.yml)
 [![npm version](https://img.shields.io/npm/v/localzada.svg)](https://www.npmjs.com/package/localzada)
 [![Node.js Version](https://img.shields.io/node/v/localzada.svg)](https://nodejs.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
@@ -35,8 +35,6 @@ Built cross-platform (Linux, macOS, Windows). Written in TypeScript. Free for so
 ---
 
 ## Quick start
-
-> ⚠️ **Forkers:** Search for `YOUR_USERNAME` and `example.com` in this repo and replace with your own details.
 
 ```bash
 # Install

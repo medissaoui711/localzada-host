@@ -11,7 +11,7 @@
 
 **Please do not open public GitHub issues for security vulnerabilities.**
 
-Instead, email the maintainer at: **security@example.com** *(replace with your email)*.
+Instead, email the maintainer at: **contacteinfo71@gmail.com**.
 
 Include:
 
