@@ -1,0 +1,10 @@
+# The simplest possible localzada.yaml.
+# Equivalent to: localzada start --port 3000 --name app -- npm run dev
+
+version: 1
+profile: my-app
+
+services:
+  app:
+    cmd: npm run dev
+    port: 3000

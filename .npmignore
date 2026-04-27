@@ -1,0 +1,26 @@
+# Source files (we publish dist/ only)
+src/
+scripts/
+tests/
+
+# Configs not needed at runtime
+tsconfig.json
+.eslintrc*
+.prettierrc*
+.editorconfig
+
+# Dev
+.github/
+.vscode/
+.idea/
+*.tsbuildinfo
+coverage/
+.nyc_output/
+
+# Examples and docs (link to GitHub instead)
+examples/
+docs/
+
+# CI artifacts
+*.tgz
+.npmrc

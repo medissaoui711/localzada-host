@@ -1,0 +1,43 @@
+# Localzada profile for QanunAI (Tunisian legal AI agent)
+#
+# Usage (after v1.2.0):
+#   localzada dev
+#
+# This will:
+#   1. Start the FastAPI backend on :8000
+#   2. Wait until it's healthy (TCP probe)
+#   3. Start the Telegram bot, which depends on `api`
+#   4. Open the named tunnel so Telegram can deliver webhooks
+
+version: 1
+profile: qanunai
+
+services:
+  api:
+    cmd: uvicorn main:app --reload --port 8000
+    port: 8000
+    env:
+      DATABASE_URL: postgresql://localhost/qanunai_dev
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY}    # from shell or .env
+      LOG_LEVEL: debug
+    waitFor: tcp
+    healthTimeout: 30s
+
+  telegram-bot:
+    cmd: python bot.py
+    dependsOn: [api]
+    env:
+      TELEGRAM_TOKEN: ${TELEGRAM_TOKEN}
+      WEBHOOK_URL: https://qanunai-dev.example.dev/webhook
+
+tunnel:
+  type: named
+  hostname: qanunai-dev.example.dev
+  service: http://localhost:8000
+  startWith: api
+
+env:
+  load:
+    - .env
+    - .env.development
+  inherit: true

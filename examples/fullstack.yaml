@@ -1,0 +1,36 @@
+# A typical fullstack setup: Next.js frontend + Express API + Postgres + tunnel.
+# Run with: localzada dev
+
+version: 1
+profile: my-fullstack-app
+
+services:
+  db:
+    cmd: docker compose up postgres
+    waitFor: tcp
+    port: 5432
+    healthTimeout: 60s   # docker can be slow on first run
+
+  api:
+    cmd: npm run dev:api
+    port: 4000
+    dependsOn: [db]
+    env:
+      DATABASE_URL: postgres://localhost:5432/myapp
+    waitFor: http
+    healthPath: /healthz
+
+  web:
+    cmd: npm run dev:web
+    port: 3000
+    dependsOn: [api]
+    env:
+      NEXT_PUBLIC_API_URL: http://localhost:4000
+
+tunnel:
+  type: quick                  # random *.trycloudflare.com URL
+  service: http://localhost:3000
+  startWith: web
+
+env:
+  load: [.env]

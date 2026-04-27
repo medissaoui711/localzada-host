@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Question / Discussion
+    url: https://github.com/YOUR_USERNAME/localzada/discussions
+    about: For usage questions or open-ended discussion, please use Discussions instead of Issues.
+  - name: Security vulnerability
+    url: https://github.com/YOUR_USERNAME/localzada/blob/main/SECURITY.md
+    about: Please follow the responsible disclosure process in SECURITY.md — do not open a public issue.
