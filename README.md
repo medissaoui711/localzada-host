@@ -70,6 +70,45 @@ Short alias `lz` works everywhere `localzada` does.
 
 ---
 
+## Framework Guide
+
+### Vite
+
+To use Localzada with Vite on a fixed port (3000):
+
+**1. Configure `vite.config.js`:**
+
+```js
+import { defineConfig } from 'vite'
+
+export default defineConfig({
+  server: {
+    host: '0.0.0.0',
+    port: 3000
+  }
+})
+```
+
+**2. Update `package.json`:**
+
+```json
+{
+  "scripts": {
+    "dev": "vite"
+  }
+}
+```
+
+**3. Start with Localzada:**
+
+```bash
+localzada start -p 3000 npm run dev
+```
+
+> **Why `--host`?** Vite listens on `localhost` by default. The `host: '0.0.0.0'` setting makes it accessible externally, which is required for tunneling.
+
+---
+
 ## Commands
 
 | Command | Description |
